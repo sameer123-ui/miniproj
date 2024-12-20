@@ -1,0 +1,63 @@
+body{
+    background: white;
+    color: black;
+   
+}
+header h1{
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    padding: 20px;
+    margin-left: 35%;
+    display: inline;
+    border-style: groove;
+    border-color: black;
+    border-width: medium;
+    margin-top: 50%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.navbar{ 
+     color: black;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 50px;
+    background-color: black;
+}
+nav ul a{
+    font-size: 30px;
+    color: red;
+    display: block;
+    height: auto;
+    
+}
+nav ul a:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+.header-text{
+    margin-top: 50px;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: red;
+}
+.header-text p{
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+}
