@@ -5,7 +5,7 @@ body{
 }
 header h1{
     text-align: center;
-    color: black;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 60px;
     padding: 20px;
@@ -16,7 +16,7 @@ header h1{
     border-width: medium;
     margin-top: 50%;
     border-radius: 10px;
-    background-color: white;
+    background-color: black;
 }
 
 .navbar{ 
@@ -35,29 +35,103 @@ nav ul{
 }
 nav ul a{
     font-size: 30px;
-    color: red;
+    color: white;
     display: block;
     height: auto;
     
 }
 nav ul a:hover{
-    background-color: white;
+    background-color: red;
     transition: 0.5s;
 }
 
-.header-text{
-    margin-top: 50px;
-    font-size: 30px;
+.header-section {
+    text-align: center;
+    padding: 50px;
+    background: black; /* Light background for a clean look */
 }
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
+
+.header-content {
+    display: inline-block;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background: black; /* Background for content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
-.header-text h1 span{
+
+.welcome-message {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 10px;
+}
+.welcome-message:hover{
     color: red;
 }
-.header-text p{
-    font-size: larger;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: blue;
+
+.introduction {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 5px;
+}
+.introduction:hover{
+    color: red;
+}
+
+.location {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 15px;
+}
+.location:hover{
+    color: red;
+}
+
+.tagline {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+.tagline:hover{
+    color: red;
+}
+.profile-image {
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    border: 5px solid black;
+    object-fit: cover; 
+    margin-top: 20px;
+}
+
+.highlight {
+    color: red; /* Highlight color for the name */
+    font-weight: bold;
+}
+
+
+.copyright{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+}
+.copyright:hover{
+    color: red;
+}
+@media (max-width: 768px) {
+    .header-content {
+        padding: 15px;
+    }
+    .welcome-message {
+        font-size: 24px;
+    }
+    .introduction, .location {
+        font-size: 20px;
+    }
+    .profile-image {
+        width: 250px;
+        height: 300px;
+    }
 }
