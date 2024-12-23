@@ -18,9 +18,9 @@
         <div class="menu-toggle" id="menu-toggle">
             <ul>
         <a href="#">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About Me</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact Us</a>
     </ul>
     </div>
     </nav>
@@ -33,7 +33,123 @@
             <img src="images/tri.png" alt="Profile picture of Sameer Chhetri" class="profile-image">
         </div>
     </div>
-    
+
+
+    <div id="menu">
+        <div class="container">
+        <h1 class="sub-title">Menu</h1>
+        <div class="menu-list">
+            <div class="menu-item">
+                <h2>MOMO</h2>
+                <img src="images/momo.jpg" width="200px" height="150px">
+                <p>
+                    <li>Chicken MOMO:<strong> Rs 150</strong></li>
+                    <li>Buff MOMO:<strong> RS 120</strong></li>
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="menu-item">
+                <h2>Pizza</h2>
+                <img src="images/pizza.jpg" width="200px" height="150px">
+                <p>
+                    <li>Chicken Pizza:<strong> Rs 400</strong></li>
+                    <li>Veg Pizza:<strong> RS 250</strong></li>
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="menu-item">
+                <h2>Chowmein</h2>
+                <img src="images/chow.jpg" height="150px" width="200px">
+                <p>
+                    <li>Chicken Chowmein:<strong> Rs 150</strong></li>
+                    <li>Buff Chowmein:<strong> RS 120</strong></li>
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="menu-item">
+                <h2>Hukka</h2>
+                <img src="images/hukka.jpg" width="200px" height="150px">
+                <p>
+                    <li>Mint:<strong> Rs 400</strong></li>
+                    <li>Double Apple:<strong> RS 400</strong></li>
+                    <li>Coal add:<strong> Rs 50</strong></li>
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+        </div>
+    </div>   
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Sameer Chhetri.</p> 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" data-tab="skills">Skills</p>
+                        <p class="tab-links" data-tab="experience">Experience</p>
+                        <p class="tab-links" data-tab="education">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Customer Service</span><br>We provide the best customer service.</li>
+                            <li><span>Food knowledge</span><br>We have this food knowledge</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018-2021</span><br>Worked at the Soltee Hotel as a head Chief</li>
+                            <li><span>2021-2023</span><br>Worked as food inspector</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>+2</span><br>Nist College</li>
+                            <li><span>Bachelor</span><br>Golden Gate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact US</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>sameerchhetri511@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone-flip"></i>9812343217</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="images/mycv.pdf" download class="btn btn2">Download CV</a>
+    </div>
+
+              <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
 
 </body>
  
@@ -41,4 +157,27 @@
 <div class="copyright">
     <p> Copyright @ Sameer Chhetri.<i class="fa-solid fa-heart"></i>2024</p>
 </div>
+
+<script>
+
+    const tabLinks = document.querySelectorAll(".tab-links");
+    const tabContents = document.querySelectorAll(".tab-contents");
+    
+    
+    tabLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            
+            tabLinks.forEach(link => link.classList.remove("active-link"));
+            tabContents.forEach(content => content.classList.remove("active-tab"));
+            
+            
+            link.classList.add("active-link");
+            
+            
+            const tabId = link.getAttribute("data-tab");
+            document.getElementById(tabId).classList.add("active-tab");
+        });
+    });
+    
+    </script>
 </html>
